@@ -1,0 +1,30 @@
+.bg-pic {
+  background-image: url(/assets/images/pramod-tiwari-Br0F5xMArxI-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 450px;
+}
+.start-menu {
+  background-color: white;
+  opacity: 75%;
+  border-radius: 1%;
+  text-align: center;
+  height: 25vh;
+  width: 40vw;
+}
+
+button {
+  color: #ffffff;
+  margin-top: 45px;
+  padding: 15px 25px;
+  background-color: black;
+  border-radius: 5%;
+}
