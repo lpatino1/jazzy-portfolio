@@ -1,11 +1,11 @@
 * {
   padding: 0;
   margin: 0;
-  --darker-pink: #fbbac3;
-  --main-color: #f9cccf;
-  --accent-color: #107089;
+  --light-text: #ebe0da;
+  --main-color: #ecc7b7;
+  --accent-color: #ab3b61;
   --accent-yellow: #f6c608;
-  --accent-midnight-green: #03546f;
+  --dark-text: #03546f;
   --accent-orange: #fa8735;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -14,16 +14,18 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background-image: url("./images/pexels-lumn-399161.jpg");
   background-color: var(--main-color);
+  /* background-image: url("./images/pexels-lumn-399161.jpg");
+  
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+
+  background-position: top; */
 }
 
 #mainContainer {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
@@ -31,48 +33,117 @@ body {
 
 /* NAVIGATION BAR */
 nav {
-  padding: 5% 5%;
-  height: 25vh;
-  width: 25vw;
+  padding: 5px 5px;
+  height: 8vh;
+  width: 75vw;
   order: 2;
+  /* border-bottom: solid #e0a98f 2px; */
 }
 
 #navContainer {
-  /* background-color: white; */
+  background-color: var(--main-color);
   display: flex;
-  flex-flow: column wrap;
-  justify-content: space-evenly;
-  align-items: stretch;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
-.NavDiv {
-  background-color: white;
-  color: var(--accent-midnight-green);
+/* Flex box containing Nav Li */
+#navLiContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+.navDiv {
+  background-color: var(--main-color);
+  color: var(--dark-text);
+  position: relative;
   text-align: center;
-  padding-top: 10px;
-  border-radius: 30px;
-  border: var(--accent-yellow) 0.05rem solid;
-  font-size: x-large;
+  padding: 10px 50px;
+  /* font-size: large; */
+  border-bottom: #e0a98f 0.05rem solid;
   flex: auto;
 }
-.NavDiv:hover {
-  background-color: var(--darker-pink);
-  color: white;
-  border: white 0.05rem solid;
+
+.navDiv:hover {
+  background-color: #e5b59f;
+  color: var(--dark-text);
+  border: #e0a98f 0.05rem solid;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* MAIN CONTENT */
+/* throwaway css */
+/* #navHeader {
+  color: var(--dark-text);
+  /* font-weight: bolder; */
 
+/* NavDiv Cloud CSS */
+/* .cloud {
+ 
+  text-align: center;
+  margin-top: 70px;
+  width: 200px;
+  height: 100px;
+  background: #eceff1;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+}
+.cloud::after,
+.cloud::before {
+  font-weight: bold;
+  color: navy;
+  content: "hello";
+  position: relative;
+  display: inline-block;
+  background: inherit;
+  border-radius: inherit;
+}
+.cloud::after {
+  width: 110px;
+  height: 100px;
+  top: -115px;
+  left: -145px;
+}
+.cloud::before {
+  width: 180px;
+  height: 180px;
+  top: -70px;
+  left: 130px;
+} */
+
+/* MAIN CONTENT */
 main {
   height: 70vh;
   width: 50vw;
-  background-color: var(--darker-pink);
+  /* background-color: var(--main-color); */
   order: 1;
 }
 
-#content {
-  background-color: white;
-  height: fit-content;
-  width: fit-content;
+#firstName {
+  color: #d07694;
+  text-align: left;
+  font-weight: bold;
+  font-size: 500%;
+  font-style: italic;
+  text-shadow: 4px 3px var(--accent-color);
+  margin-bottom: -55px;
+}
+
+#lastName {
+  text-align: left;
+  margin-left: 40px;
+  color: #d07694;
+  font-weight: bold;
+  font-size: 500%;
+  font-style: italic;
+  text-shadow: 4px 3px var(--accent-color);
+}
+
+.content {
+  background-color: var(--light-text);
+  text-align: center;
 }
