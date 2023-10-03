@@ -8,44 +8,63 @@
     <link rel="stylesheet" href="/public/style.css" />
 
     <title>Lesli Patino</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/cloud.svg" />
   </head>
   <body>
     <div id="mainContainer">
-      <!-- sidebar nav -->
+      <!-- navigation bar -->
       <header>
         <nav id="navContainer">
-          <div class="NavDiv"><a href="./contact.html">Contact</a></div>
-          <div class="NavDiv"><a href="/src/index.html">About</a></div>
-          <div class="NavDiv"><a href="./projects.html">Projects</a></div>
+          <div id="navHeader">
+            <!-- <h1>Lesli Patino</h1> -->
+          </div>
+          <div>
+            <ul id="navLiContainer">
+              <li class="navDiv">
+                <a href="../public/pages/contact.html">Contact</a>
+              </li>
+              <li class="navDiv">
+                <a href="/src/index.html">About</a>
+              </li>
+              <li class="navDiv">
+                <a href="../public/pages/projects.html">Projects</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
+
       <!-- Main content -->
       <main>
-        <div id="content">
-          <h1>CONTACT PAGE</h1>
+        <div class="mainHeader">
+          <div>
+            <h1 id="firstName">Contact</h1>
+            <h2 id="lastName">Me</h2>
+          </div>
+
+          <!-- <div class="cloudBg"></div> -->
+          <div>
+            <svg id="happyCloudSvg"></svg>
+          </div>
+        </div>
+
+        <div id="aboutContent">
+          <p>&#127775; Aspiring web developer</p>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
-            fugiat iste vel numquam a dicta optio debitis soluta, molestias quae
-            inventore nemo, rerum est sint. Temporibus odit nemo officia
-            debitis!
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
-            dolorem magni quis nobis, ea modi repellat quod sunt obcaecati
-            impedit, dicta reprehenderit! Officiis, dolor voluptatibus? Quae
-            perspiciatis esse incidunt quos. Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit. Magni ea cupiditate esse vitae fuga
-            accusamus nisi autem, numquam molestiae suscipit tenetur voluptates
-            nobis totam quia. Ab facilis aspernatur ratione ipsam?Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Nostrum sapiente et
-            architecto accusantium voluptatum velit nemo, vitae aperiam
-            aspernatur cum excepturi esse natus eveniet eligendi laborum autem,
-            rerum consequuntur porro.
+            &#127775; Certified Full-Stack Web Developer from the University of
+            Washington
           </p>
         </div>
       </main>
     </div>
+    <!-- footer -->
+    <!-- <footer>
+      <div>
+        <p>made with <3</p>
+      </div>
+    </footer> -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
