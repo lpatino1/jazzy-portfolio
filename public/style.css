@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +8,7 @@
   --accent-yellow: #f6c608;
   --dark-text: #03546f;
   --accent-orange: #fa8735;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Young Serif", serif;
 }
 
 #mainContainer {
@@ -82,7 +83,7 @@ nav {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* MAIN CONTENT */
+/**************** MAIN CONTENT ****************/
 main {
   order: 1;
 }
@@ -135,7 +136,8 @@ main {
   width: 100px;
   height: 110px;
 }
-/* styling for first and last name header */
+
+/***** styling for first and last name header ******/
 #firstHello {
   color: var(--accent-yellow);
   text-align: left;
@@ -172,33 +174,78 @@ main {
   background-color: var(--dark-text);
 }
 
-/* THROWAWAY CSS */
-/* .cloudBg {
-  margin: 70px 0px;
-  width: 250px;
-  height: 100px;
-  background: #eceff1;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 100px;
+/************** PROJECTS HORIZONTAL ACCORDION CSS ******************/
+
+.container {
+  height: 100vh;
+  /* max-width: 50%;
+  max-height: 50%; */
+  /* margin: 0 auto; */
+  padding: 20px 20px;
+  display: grid;
+  place-items: center;
 }
 
-.cloudBg::after,
-.cloudBg::before {
-  content: "";
-  position: relative;
-  display: inline-block;
-  background: inherit;
-  border-radius: inherit;
-}
-.cloudBg::after {
-  width: 90px;
-  height: 90px;
-  top: -80px;
-  left: -90px;
-}
-.cloudBg::before {
-  width: 125px;
-  height: 125px;
-  top: -60px;
-  left: 10 0px;
+/* .container-slides {
 } */
+.slides {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slide {
+  list-style-type: none;
+  min-height: 400px;
+  height: 500px;
+  width: 5%;
+  overflow: hidden;
+  transition: all 500ms linear;
+}
+
+/* change background of each slide */
+.brand1 {
+  background-color: #f6c608;
+}
+.brand2 {
+  background-color: #ab3b61;
+}
+.brand3 {
+  background-color: #f6c608;
+}
+.brand4 {
+  background-color: #ab3b61;
+}
+
+.slide a.action {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+.slide a.action span {
+  font-weight: 600;
+  color: #ffff;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 10%;
+  width: 140px;
+  left: -30%;
+  height: 100px;
+}
+
+.slide-content {
+  display: block;
+  width: 720px;
+  padding: 40px;
+  color: #ffff;
+}
+
+.active {
+  width: 80%;
+}
+
+.active a.action {
+  display: none;
+}
