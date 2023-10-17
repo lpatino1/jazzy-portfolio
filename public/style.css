@@ -178,16 +178,28 @@ main {
 
 .container {
   height: 100vh;
+  width: 100vw;
   /* max-width: 50%;
   max-height: 50%; */
-  /* margin: 0 auto; */
+  margin: 0 auto;
   padding: 20px 20px;
   display: grid;
-  place-items: center;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, 33%);
+  justify-content: center;
 }
 
-/* .container-slides {
-} */
+#projectHeader {
+  align-self: center;
+  justify-self: end;
+  grid-column: 2;
+  grid-row: 1;
+}
+.container-slides {
+  align-self: center;
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
 .slides {
   width: 100%;
   display: flex;
@@ -202,10 +214,14 @@ main {
   width: 5%;
   overflow: hidden;
   transition: all 500ms linear;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
 }
 
 /* change background of each slide */
-.brand1 {
+/* .brand1 {
   background-color: #f6c608;
 }
 .brand2 {
@@ -216,7 +232,7 @@ main {
 }
 .brand4 {
   background-color: #ab3b61;
-}
+} */
 
 .slide a.action {
   display: block;
@@ -243,7 +259,7 @@ main {
 }
 
 .active {
-  width: 80%;
+  width: 90%;
 }
 
 .active a.action {
