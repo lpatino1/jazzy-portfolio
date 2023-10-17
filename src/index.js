@@ -1,3 +1,4 @@
+//////////////Projects' cards sliding opening animation/////////////////////
 $(document).ready(function () {
   // link action
   $(".action").click(function (e) {
@@ -28,3 +29,10 @@ $(window).resize(function () {
   clearTimeout(window.resizedFinished);
   window.resizedFinished = setTimeout(checkWidth, 500);
 });
+
+//////////////////// run Particle.js on load ////////////////////////
+window.onload = function () {
+  Particles.init({
+    selector: ".background",
+  });
+};

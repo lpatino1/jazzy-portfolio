@@ -19,5 +19,8 @@
   "homepage": "https://github.com/lpatino1/jazzy-portfolio#readme",
   "devDependencies": {
     "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "particlesjs": "^2.2.3"
   }
 }
