@@ -34,5 +34,9 @@ $(window).resize(function () {
 window.onload = function () {
   Particles.init({
     selector: ".background",
+    color: ["#0071d8", "#DBEDF3", "#004e95"],
+    connectParticles: true,
+    sizeVariations: 4,
+    speed: 0.7,
   });
 };

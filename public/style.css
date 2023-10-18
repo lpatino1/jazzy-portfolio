@@ -2,17 +2,17 @@
 * {
   padding: 0;
   margin: 0;
-  --light-text: #ebe0da;
-  --main-color: #003040;
-  --accent-color: #ab3b61;
-  --accent-yellow: #f6c608;
-  --dark-text: #03546f;
-  --accent-orange: #fa8735;
+  --main-color: #0a1f36;
+  --light-text: #ffffff;
+  --light-accent: #1b5ea5;
+  --dark-accent: #133f6d;
+  --dark-text: #000000;
   font-family: "Young Serif", serif;
 }
 html,
 body {
-  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .background {
@@ -20,48 +20,55 @@ body {
   display: block;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
+  background: rgb(19, 63, 109);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(19, 63, 109, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(19, 63, 109, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(19, 63, 109, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#133f6d",endColorstr="#000000",GradientType=1);
 }
 
 #mainContainer {
   width: 100vw;
   height: 100vh;
-  /* display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 30px; */
   scroll-behavior: smooth;
 }
 
 .section {
   width: 100vw;
   height: 100vh;
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
-  gap: 50px;
+
+  /* gap: 50px; */
 }
 
-/* NAVIGATION BAR */
+/************************ NAVIGATION BAR *************************/
 nav {
   padding: 5px 5px;
   height: 8vh;
   width: 100vw;
   order: 2;
+  background-color: rgba(0, 0, 0, 0.5);
   /* border-bottom: solid #e0a98f 2px; */
 }
 
 #navContainer {
-  background-image: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 48, 64, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  /* position: relative; */
+  z-index: 1;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   margin-bottom: 0;
@@ -78,26 +85,26 @@ nav {
 
 /* nav div styling */
 .navDiv {
-  background-color: var(--main-color);
-  color: var(--dark-text);
+  /* background-color: var(--main-color); */
+  color: var(--light-text);
   position: relative;
   text-align: center;
   padding: 10px 50px;
   /* font-size: large; */
-  border-bottom: #e0a98f 0.05rem solid;
+  border-bottom: var(--dark-accent) 0.05rem solid;
   flex: auto;
 }
 
 .navDiv:hover {
-  background-color: #e5b59f;
-  color: var(--dark-text);
-  border: #e0a98f 0.05rem solid;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(10, 31, 54, 0.5);
+  color: var(--light-text);
+  border: var(--dark-accent) 0.05rem solid;
+  box-shadow: 1px 1px var(--light-text);
 }
 
-/**************** MAIN CONTENT ****************/
-main {
-  order: 1;
+/******************** MAIN CONTENT *************************/
+p {
+  color: var(--light-text);
 }
 
 /* css grid for section 1: About Me */
@@ -106,13 +113,8 @@ main {
   grid-template-columns: 25% 25% 25%;
   grid-template-rows: 10vw 25vw 10vw 5vw;
   grid-gap: 0px;
-  background-color: var(--main-color);
-  background-image: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(0, 48, 64, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0014b1",endColorstr="#002358",GradientType=1);
 }
 
 .item-a {
@@ -140,6 +142,8 @@ main {
 .item-d {
   grid-row: 3;
   grid-column: 2 / span 2;
+  align-self: end;
+  justify-self: center;
 }
 
 #happyCloudSvg {
@@ -151,19 +155,19 @@ main {
 
 /***** styling for first and last name header ******/
 #firstHello {
-  color: var(--accent-yellow);
+  color: #daa520;
   text-align: left;
   font-weight: bold;
   font-size: 500%;
   font-style: italic;
-  text-shadow: 4px 3px var(--dark-text);
+  text-shadow: 4px 3px var(--dark-accent);
   margin-bottom: -40px;
 }
 
 .main-header-text {
   text-align: left;
   margin-left: 80px;
-  color: var(--accent-yellow);
+  color: var(--light-text);
   font-weight: bold;
   font-size: 500%;
   font-style: italic;
