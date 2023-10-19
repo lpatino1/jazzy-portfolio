@@ -38,5 +38,6 @@ window.onload = function () {
     connectParticles: true,
     sizeVariations: 4,
     speed: 0.7,
+    maxParticles: 110,
   });
 };
