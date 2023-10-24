@@ -13,6 +13,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-y: visible;
   background: rgb(19, 63, 109);
   background: -moz-linear-gradient(
     0deg,
@@ -30,6 +31,7 @@ body {
     rgba(0, 0, 0, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#133f6d",endColorstr="#000000",GradientType=1);
+
   scroll-behavior: smooth;
 }
 
@@ -38,7 +40,6 @@ body {
   display: block;
   top: 0;
   left: 0;
-
   z-index: 0;
 }
 /* #mainContainer {
@@ -46,10 +47,10 @@ body {
   height: 100vh;
 } */
 
-.section {
+/* .section {
   width: 100vw;
   height: 100vh;
-}
+} */
 
 /************************ NAVIGATION BAR *************************/
 nav {
@@ -102,6 +103,31 @@ nav {
   box-shadow: 1px 1px var(--light-text);
 }
 
+/*********************** Github Icon Button *********************/
+
+.floating-parent {
+  z-index: 1;
+  position: fixed;
+  bottom: 3%;
+  right: 18px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.github-Button {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background: url(../public/images/github-mark-white.png);
+  background-repeat: no-repeat;
+  background-size: 48px;
+  background-position: center;
+  margin: 0 auto;
+  cursor: pointer;
+
+  /* box-shadow: 1px 1px 5px var(--dark-accent); */
+}
+
 /******************** MAIN CONTENT *************************/
 p {
   color: var(--light-text);
@@ -150,6 +176,14 @@ p {
   grid-column: 2 / span 2;
   align-self: end;
   justify-self: center;
+}
+
+.item-e {
+  grid-row: 3;
+  grid-column: 3;
+  align-self: end;
+  justify-self: center;
+  z-index: 1;
 }
 
 #happyCloudSvg {
