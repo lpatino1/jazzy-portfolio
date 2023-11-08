@@ -17,13 +17,13 @@
           <div>
             <ul id="navLiContainer">
               <li class="navDiv">
-                <a href="../public//pages/contact.html">Contact</a>
+                <a href="#aboutMe">Contact</a>
               </li>
               <li class="navDiv">
-                <a href="./index.html">About</a>
+                <a href=".mainHeader">About</a>
               </li>
               <li class="navDiv">
-                <a href="../public/pages/projects.html">Projects</a>
+                <a href="#projects">Projects</a>
               </li>
             </ul>
           </div>
@@ -32,7 +32,7 @@
 
       <!---------------------- Main content------------------------->
       <main>
-        <div class="mainHeader">
+        <div class="mainHeader" id="aboutMe">
           <!-- hi, im lesli -->
           <div class="item-a">
             <h1 id="firstHello">Hi,</h1>
@@ -43,10 +43,45 @@
             <svg id="happyCloudSvg"></svg>
           </div>
           <!-- about me -->
-          <div id="aboutContent" class="item-c">
+          <div class="aboutContent item-c">
             <ul>
-              <li>&#127775; Aspiring Web Dev</li>
-              <li>&#127775; FSD</li>
+              <li>&#127775; Aspiring Web Developer</li>
+              <li>
+                &#127775; Full-stack Web Developer Certified from the University
+                of Washington
+              </li>
+              <li>
+                &#127775; Current College Student looking for internship
+                opportunities
+              </li>
+            </ul>
+          </div>
+          <div class="aboutContent item-g">
+            <ul>
+              <li>&#127775; Expected graduation: Summer 2024</li>
+              <li>Interested in:</li>
+              <li>&#127775; React</li>
+              <li>&#127775; MySql</li>
+            </ul>
+          </div>
+          <div class="aboutContent item-f">
+            <ul>
+              <h2>Languages I'm familiar with:</h2>
+              <li>&#127775; HTML</li>
+              <li>&#127775; CSS</li>
+              <li>&#127775; Javascript</li>
+              <li>&#127775; Java</li>
+              <li>&#127775; C</li>
+            </ul>
+          </div>
+          <div class="aboutContent item-e">
+            <ul>
+              <h2>Technologies I'm familiar with:</h2>
+              <li>&#127775; MySql</li>
+              <li>&#127775; MongoDB</li>
+              <li>&#127775; Bootstrap</li>
+              <li>&#127775; React</li>
+              <li>&#127775; APIs</li>
             </ul>
           </div>
           <!-- tell users to scroll :) -->
@@ -58,71 +93,110 @@
         <!---------------------- Projects sections -------------------->
         <div id="projects">
           <div class="container">
-            <div id="projectHeader">
-              <h1><span>Projects</span></h1>
+            <h1><span>PROJECTS</span></h1>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img
+                  src="../public/images/Timed-Trivia-Quiz-Home.png"
+                  style="width: 100%"
+                  class="project-images"
+                />
+                <div class="text">
+                  <h1>
+                    <a
+                      href="https://lpatino1.github.io/timed-trivia-quiz/"
+                      target="_blank"
+                      >Timed Trivia Quiz</a
+                    >
+                  </h1>
+                  <p>
+                    One of my first projects with Javascript was inspired by a
+                    popular GACHA game on the App Store known as Genshin Impact.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img
+                  src="../public/images/weather-dashboard-search.png"
+                  style="width: 100%"
+                />
+                <div class="text">
+                  <h1>
+                    <a
+                      href="https://lpatino1.github.io/weather-dashboard/"
+                      target="_blank"
+                      >Weather Dashboard</a
+                    >
+                  </h1>
+                  <p>A simple weather dashboard demonstrating API knowledge.</p>
+                </div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img
+                  src="../public/images/Concertopia.png"
+                  style="width: 100%"
+                />
+                <div class="text">
+                  <h1>
+                    <a
+                      href="https://lpatino1.github.io/concertopia/"
+                      target="_blank"
+                      >Concertopia</a
+                    >
+                  </h1>
+                  <p>
+                    A group project music app allowing users to search for both
+                    music and events near them using the following API's: The
+                    Audio DB, Lyrcs.ovh, Open Cage Data Geocoder, Ticketmaster
+                    Discovery Map Widget.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img
+                  src="../public/images/techbloghome.png"
+                  style="width: 100%"
+                />
+                <div class="text">
+                  <h1>
+                    <a
+                      href="https://github.com/lpatino1/tech-blog"
+                      target="_blank"
+                      >Tech Blog</a
+                    >
+                  </h1>
+                  <p>TBA</p>
+                </div>
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <div class="container-slides">
-              <ul class="slides">
-                <li class="slide active brand1">
-                  <a href="#" class="action"><span>Project 1</span></a>
-                  <div class="slide-content">
-                    <h2>React App</h2>
-                    <hr>
-                    <img
-                      src=""
-                      alt="preview picture showing the home page of the react app"
-                    />
-                    <p>
-                      <hr>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Soluta non enim rerum similique eveniet quia dignissimos
-                      ea architecto quo ducimus sit consectetur, ad fuga id
-                      voluptatibus distinctio pariatur. Eligendi, obcaecati!
-                    </p>
-                    <p></p>
-                  </div>
-                </li>
-                <li class="slide brand2">
-                  <a href="#" class="action"> <span>Project 2</span></a>
-                  <div class="slide-content">
-                    <h2>Timed Quiz</h2>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Soluta non enim rerum similique eveniet quia dignissimos
-                      ea architecto quo ducimus sit consectetur, ad fuga id
-                      voluptatibus distinctio pariatur. Eligendi, obcaecati!
-                    </p>
-                  </div>
-                </li>
-                <li class="slide brand3">
-                  <a href="#" class="action"> <span>Project 3</span></a>
-                  <div class="slide-content">
-                    <h2>Weather Dashboard</h2>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Soluta non enim rerum similique eveniet quia dignissimos
-                      ea architecto quo ducimus sit consectetur, ad fuga id
-                      voluptatibus distinctio pariatur. Eligendi, obcaecati!
-                    </p>
-                  </div>
-                </li>
-                <li class="slide brand4">
-                  <a href="#" class="action"> <span>Project 4</span></a>
-                  <div class="slide-content">
-                    <h2>title4</h2>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Soluta non enim rerum similique eveniet quia dignissimos
-                      ea architecto quo ducimus sit consectetur, ad fuga id
-                      voluptatibus distinctio pariatur. Eligendi, obcaecati!
-                    </p>
-                  </div>
-                </li>
-              </ul>
+            <br />
+
+            <!-- The dots/circles -->
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
             </div>
           </div>
         </div>
       </main>
+    </div>
+    <div id="contactme">
+      <h1>Contact Me Section to be added soon!</h1>
     </div>
     <!-- footer -->
     <!-- Link to Github Profile -->

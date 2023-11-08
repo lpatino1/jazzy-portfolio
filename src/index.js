@@ -1,35 +1,37 @@
-//////////////Projects' cards sliding opening animation/////////////////////
-$(document).ready(function () {
-  // link action
-  $(".action").click(function (e) {
-    e.preventDefault();
+///////////////Color picker for Projects' Section Background Color////////////////////////
 
-    $(".slide").removeClass("active");
-    var slide = $(this).closest(".slide");
-    slide.addClass("active");
-  });
-});
+let slideIndex = 1;
+showSlides(slideIndex);
 
-// checkWidth
-checkWidth = function () {
-  var windowsize = $(window).width();
-  if (windowsize > 480) {
-    var slideWidth = $(".active").width();
-    $(".slide-content").css({
-      width: slideWidth + "px",
-    });
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
   }
-};
-
-$(window).resize(function () {
-  // onresize
-  checkWidth();
-
-  // finish resize
-  clearTimeout(window.resizedFinished);
-  window.resizedFinished = setTimeout(checkWidth, 500);
-});
-
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
 //////////////////// run Particle.js on load ////////////////////////
 window.onload = function () {
   Particles.init({
@@ -41,8 +43,3 @@ window.onload = function () {
     maxParticles: 110,
   });
 };
-
-// $(".added").each(function () {
-//   var link = $(this).html();
-//   $(this).contents().wrap('<a href="https://github.com/lpatino1"></a>');
-// });
