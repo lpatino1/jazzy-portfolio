@@ -1,48 +1,39 @@
-///////////////Color picker for Projects' Section Background Color////////////////////////
+//Creating cards for projects
+const cardData = [
+  {
+    heading: "Timed Trivia Quiz",
+    body: "One of my first projects with Javascript was inspired by a popular GACHA game on the App Store known as Genshin Impact.",
+    link: "https://lpatino1.github.io/timed-trivia-quiz/",
+  },
+  {
+    heading: "Weather Dashboard",
+    body: "A simple weather dashboard demonstrating API knowledge.",
+    link: "https://lpatino1.github.io/weather-dashboard/",
+  },
+  {
+    heading: "Concertopia",
+    body: "A group project music app allowing users to search for both music and events near them using the following API's: The Audio DB, Lyrcs.ovh, Open Cage Data Geocoder, Ticketmaster Discovery Map Widget.",
+    link: "https://lpatino1.github.io/concertopia/",
+  },
+  {
+    heading: "Tech Blog",
+    body: "this is Card body4",
+    link: "https://github.com/lpatino1/tech-blog",
+  },
+];
 
-let slideIndex = 1;
-showSlides(slideIndex);
+const postContainer = document.querySelector(".card-container");
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
+const postMethods = () => {
+  cardData.map((postData) => {
+    console.log(postData);
+    const postElement = document.createElement("div");
+    postElement.classList.add("card");
+    postElement.innerHTML = `
+    <a target= "_blank" href="${postData.link}"class="card-heading">${postData.heading}</a>
+    <p class="card-body">${postData.body}</p>`;
+    postContainer.appendChild(postElement);
+  });
+};
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-//////////////////// run Particle.js on load ////////////////////////
-// window.onload = function () {
-//   Particles.init({
-//     selector: ".background",
-//     color: ["#0071d8", "#DBEDF3", "#004e95"],
-//     connectParticles: true,
-//     sizeVariations: 4,
-//     speed: 0.7,
-//     maxParticles: 110,
-//   });
-// };
-
-///////////////////
-var rellax = new Rellax(".rellax");
+postMethods();
