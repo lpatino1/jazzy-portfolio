@@ -8,26 +8,25 @@
     <link rel="stylesheet" href="/public/style.css" />
     <title>Lesli Patino</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/cloud.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="mainContainer">
+    
+    <!-- <div id="mainContainer"> -->
       <!-- navigation bar -->
       <header>
+      
         <nav id="navContainer">
           <div>
             <ul id="navLiContainer">
               <!-- <li class="navDiv">
                 <a href="#aboutMe">Contact</a>
               </li> -->
-              <li class="navDiv">
+              <!-- <li class="navDiv">
                 <a href=".mainHeader">About</a>
-              </li>
+              </li> -->
               <li class="navDiv">
                 <a href="#projects">Projects</a>
               </li>
@@ -38,7 +37,13 @@
 
       <!---------------------- Main content------------------------->
       <main>
-        <div class="mainHeader" id="aboutMe">
+        <section>
+          
+        <div class="mainGrid" id="aboutMe">
+        
+          <div class="circle-1"></div>
+          <div class="circle-2"></div>
+          <div class="circle-3"></div>
           <!-- hi, im lesli -->
           <div class="item-a flex-container">
             <h1 class="flex-item-a"><span class="first-hello">Hi,</span></h1>
@@ -94,17 +99,28 @@
               <li>MongoDB</li>
             </ul>
           </div>
-
+          
           <!-- tell users to scroll :) -->
-          <div class="item-d">
+          <!-- <div class="item-d">
             <p>▼Scroll▼</p>
           </div>
-        </div>
+        </div> -->
+      </section>
+      <!-- section divider -->
+    <div class="custom-shape-divider-bottom-1700542472">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" class="shape-fill"></path>
+    </svg>
+</div>
+
+<!-- </div> -->
 
         <!---------------------- Projects sections -------------------->
-        <div id="projects">
+        <section>
+        <!-- <div id="projects"> -->
           <div class="container">
-            <h1><span>PROJECTS</span></h1>
+            <div class = "spacer layer1"></div>
+            <h1><span class="projects-header" id="projects">PROJECTS</span></h1>
             <!-- Slideshow container -->
             <div class="slideshow-container">
               <!-- Full-width images with number and caption text -->
@@ -203,13 +219,10 @@
               <span class="dot" onclick="currentSlide(4)"></span>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </main>
     </div>
-    <div id="contactme">
-      <h1>Contact Me Section to be added soon!</h1>
-    </div>
-    <!-- footer -->
+    </section>
     <!-- Link to Github Profile -->
     <div class="floating-parent">
       <a href="https://github.com/lpatino1">
@@ -219,7 +232,7 @@
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="index.js"></script>
-    <canvas class="background"></canvas>
+    <!-- <canvas class="background"></canvas> -->
     <script src="../node_modules/particlesjs/dist/particles.min.js"></script>
   </body>
 </html>

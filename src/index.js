@@ -33,13 +33,16 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 //////////////////// run Particle.js on load ////////////////////////
-window.onload = function () {
-  Particles.init({
-    selector: ".background",
-    color: ["#0071d8", "#DBEDF3", "#004e95"],
-    connectParticles: true,
-    sizeVariations: 4,
-    speed: 0.7,
-    maxParticles: 110,
-  });
-};
+// window.onload = function () {
+//   Particles.init({
+//     selector: ".background",
+//     color: ["#0071d8", "#DBEDF3", "#004e95"],
+//     connectParticles: true,
+//     sizeVariations: 4,
+//     speed: 0.7,
+//     maxParticles: 110,
+//   });
+// };
+
+///////////////////
+var rellax = new Rellax(".rellax");

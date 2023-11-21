@@ -21,6 +21,7 @@
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
-    "particlesjs": "^2.2.3"
+    "particlesjs": "^2.2.3",
+    "rellax": "^1.12.1"
   }
 }
