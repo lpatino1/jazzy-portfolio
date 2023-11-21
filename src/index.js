@@ -17,7 +17,7 @@ const cardData = [
   },
   {
     heading: "Tech Blog",
-    body: "this is Card body4",
+    body: "A simple blog showcasing experience with Mysql, front-end and back-end connection, and Handlebars.",
     link: "https://github.com/lpatino1/tech-blog",
   },
 ];
