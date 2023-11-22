@@ -158,7 +158,7 @@ nav {
   height: 48px;
   width: 48px;
   border-radius: 50%;
-  background: url(../public/images/github-mark-white.png);
+  background: url(./public/images/github-mark-white.png);
   background-repeat: no-repeat;
   background-size: 48px;
   background-position: center;
@@ -339,7 +339,7 @@ p {
   position: relative;
 }
 .layer1 {
-  background-image: url("../assets/images/curve.svg");
+  background-image: url("./assets/images/curve.svg");
 }
 
 /********************************* PROJECTS ************************************/
