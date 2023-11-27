@@ -133,12 +133,13 @@ nav {
 
 .navDiv li {
   list-style: none;
-  text-decoration: none;
+
   color: var(--light-text);
 }
-/* .navDiv li a{
-  
-} */
+.navDiv li a {
+  text-decoration: none;
+  color: inherit;
+}
 .navDiv:hover {
   background-color: rgba(36, 34, 34, 0.5);
   color: var(--light-accent);
