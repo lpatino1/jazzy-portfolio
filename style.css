@@ -136,7 +136,7 @@ nav {
 
   color: var(--light-text);
 }
-.navDiv li a {
+.navDiv a {
   text-decoration: none;
   color: inherit;
 }
