@@ -134,10 +134,12 @@ nav {
   /* border-bottom: var(--dark-accent) 0.05rem solid; */
   flex: auto;
   z-index: 1;
+  list-style: none;
 }
 
 .navDiv a {
-  list-style-type: none;
+  list-style: none;
+  color: var(--light-text);
 }
 .navDiv:hover {
   background-color: rgba(36, 34, 34, 0.5);
