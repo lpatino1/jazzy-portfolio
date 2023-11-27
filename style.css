@@ -118,12 +118,9 @@ nav {
 }
 
 /* Flex box containing Nav Li */
-#navLiContainer {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  gap: 50px;
-}
+/* #navLiContainer {
+
+} */
 
 /* nav div styling */
 .navDiv {
@@ -131,13 +128,10 @@ nav {
   position: relative;
   text-align: center;
   padding: 10px 50px;
-  /* border-bottom: var(--dark-accent) 0.05rem solid; */
-  flex: auto;
-  z-index: 1;
   list-style: none;
 }
 
-.navDiv a {
+.navDiv li {
   list-style: none;
   color: var(--light-text);
 }
